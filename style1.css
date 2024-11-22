@@ -160,7 +160,8 @@
   }
   #playersTurn {
     position: relative;
-    left: -330px;
+    left: -355px;
+    font-size: 26px;
   }
   .numbersContainer {
     text-align: center;
@@ -216,8 +217,8 @@
   
   @media (min-width: 350px) and (max-width:500px) {
     #numbers-grid div {
-      height: 50px;
-      width: 50px;
+      height: 55px;
+      width: 55px;
       font-size: 16px;
     }
     #chooseNumTitle {
@@ -250,14 +251,14 @@
       grid-template-columns: repeat(5, 1fr);
     }
     #playersTurn{
-      top: -40px;
+      top: -50px;
       left: 0px;
       position: relative;
     }
   }
   @media (min-width:501px) and (max-width:800px) {
     #playersTurn{
-      top: -40px;
+      top: -50px;
       left: 0px;
       position: relative;
     }

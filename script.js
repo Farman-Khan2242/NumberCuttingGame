@@ -11,7 +11,7 @@ gsap.from("#Heading1",{
   ease: "power2.out",  
 })
 gsap.from("main p",{
-  y:-10,
+  y:-50,
   duration:1,
   opacity:0,
   delay:0.7,
@@ -40,7 +40,7 @@ gsap.from(".container",{
 })
 gsap.from("#chooseNumTitle",{
   opacity:0,
-  y:-10,
+  y:-50,
   duration:1,
   delay:0.7,
   ease: "power2.out",  
@@ -63,7 +63,7 @@ gsap.from("input",{
 })
 gsap.from(".btn",{
   opacity:0,
-  y:50,
+  y:100,
   duration:1.5,
   delay:0.5,
   ease: "power2.out"  
@@ -145,6 +145,14 @@ startGameBtn.addEventListener("click", () => {
       ease: "power2.out"  
     })
 
+    gsap.from("#secondFooter",{
+      opacity:0,
+      y:10,
+      duration:1,
+      delay:1,
+      ease: "power2.out",  
+    })
+
   //page2 section animation gsap
   gsap.from(".numbersContainer",{
     opacity:0,
@@ -220,8 +228,35 @@ function handleNumberClick(num) {
     winnerMessage.textContent = "Player 2 Wins!";
     headingH1.textContent = "Game Over!";
     endGame();
+
+    //gameover title
+    gsap.from(winnerMessage,{
+      opacity:0,
+      y:25,
+      // scale:0.2,
+      duration:1,
+      delay:0.2,
+      ease: "power2.out"  
+    })
+
     playersTurn.style.display = 'none'
     restartBtn.style.display = "block";
+
+    gsap.from(restartBtn,{
+      opacity:0,
+      x:100,
+      duration:0.8,
+      delay:0.6,
+      ease: "bounce.out"  
+    })
+    gsap.from(headingH1,{
+      opacity:0,
+      y:-50,
+      duration:0.8,
+      delay:0.6,
+      ease: "power2.out"  
+    })
+
   } else {
     numbers = numbers.filter((n) => n !== num);
     renderNumbersGrid();
