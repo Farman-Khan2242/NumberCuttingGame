@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  html,body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: rgba(255, 255, 255);
+    gap: 20px;
+  }
+  
+  .welcome-container {
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  header h1 {
+    font-family: 'Geist Mono';
+    font-size: 50px;
+    color: #ff4500;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    background: url(./pictures/orangetexture.jpeg) no-repeat center;
+    font-weight: bold;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  main {
+      width: 90%;
+      text-align: center;
+  }
+  
+  main p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+    text-align: justify;
+  }
+  
+  .start-button {
+    background: #ff4500;
+    color: #fff;
+    border: none;
+    opacity: 0;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .start-button:hover {
+    background: #e03c00;
+    transform: scale(1.05);
+  }
+  
+  .start-button span {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    position: absolute;
+    bottom: 20px;
+  }
+
+
+  /* Page 2 styling */
+  .container {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 550px;
+    /* min-width: 400px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  #chooseNumTitle {
+    width: 100%;
+    font-size: 40px;
+    background: url(./pictures/orangetexture.jpeg) no-repeat center;
+    font-weight: bold;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 5px;
+    color: #fff;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  input:focus {
+    border-color: #ff4500;
+    outline: none;
+  }
+  
+  .btn {
+    margin-top: 15px;
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  
+  .btn:hover {
+    background-color: #e03c00;
+  }
+
+  .hidden {
+    display: none;
+  }
+  #playersTurn {
+    position: relative;
+    left: -330px;
+  }
+  .numbersContainer {
+    text-align: center;
+    background-color: #2c2c2c;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 500px; 
+  }
+  #numbers-grid {
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  #numbers-grid div {
+    height: 60px;
+    width: 60px;
+    background-color: #444;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  #numbers-grid div:hover {
+    background-color: #ff5722;
+  }
+
+  #winner-message {
+    color: #4caf50;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  #restart {
+    border-radius: 5px;
+    width: 90px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    color: white;
+    background: none;
+    display: none;
+    
+  }
+  #restart:hover {
+    border: 2px solid #fff;
+  }
+  
+  @media (min-width: 350px) and (max-width:500px) {
+    #numbers-grid div {
+      height: 50px;
+      width: 50px;
+      font-size: 16px;
+    }
+    #chooseNumTitle {
+      font-size: 30px;
+    }
+
+    header h1 {
+      font-size: 30px;
+    }
+    main {
+      width: 98%;
+    }
+    main p {
+      font-size: 17px;
+    }
+    .welcome-container {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    footer {
+      bottom: 2px;
+    }
+    .container {
+      width: 95%;
+    }
+    .numbersContainer {
+      width: 95%;
+    }
+    #numbers-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    #playersTurn{
+      top: -40px;
+      left: 0px;
+      position: relative;
+    }
+  }
+  @media (min-width:501px) and (max-width:800px) {
+    #playersTurn{
+      top: -40px;
+      left: 0px;
+      position: relative;
+    }
+  }
+  @media  (max-width:349px)  {
+    .container {
+      width: 95%;
+    }
+    .numbersContainer {
+      width: 95%;
+    }
+    footer {
+      bottom: 0;
+    }
+    #numbers-grid {
+      grid-template-columns: repeat(4,1fr);
+    }
+  }
+
+  
+  
+
+  

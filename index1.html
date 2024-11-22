@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Cutting Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style1.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="chooseNumTitle">Choose Your Numbers Between 1-30</h1>
+      <form id="player-form">
+        <div class="input-group">
+          <label for="player1">Player 1</label>
+          <input type="password" id="player1" min="1" max="30" required />
+        </div>
+        <div class="input-group">
+          <label for="player2">Player 2</label>
+          <input type="password" id="player2" min="1" max="30" required />
+        </div>
+        <button type="button" class="btn" id="start-game-btn">
+          Start Game
+        </button>
+      </form>
+    </div>
+
+    
+    <div class="numbersContainer hidden" id="game-container" style="position: relative;">
+      <h3 id="playersTurn">Player 1 Turn</h3>
+      <h1 id="chooseNumTitle" class="heading">Cut Number Except Your Own</h1>
+      <div id="numbers-grid"></div>
+      <h2 id="winner-message"></h2>
+    </div>
+    <button id="restart">Restart</button>
+
+    <footer id="secondFooter">© 2024 | Developed by Farman Khan</footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
