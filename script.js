@@ -55,8 +55,8 @@ gsap.from("label",{
 })
 gsap.from("input",{
   opacity:0,
-  x:100 ,
-  duration:1,
+  x:300 ,
+  duration:0.7,
   delay:0.4,
   stagger:0.2,
   ease: "power2.0ut"  
